@@ -4,6 +4,12 @@ fun main(){
     println(obj1.area())
     obj1.display()
 
+    // type checking and smart checking
+    if(obj1 is square){
+        println("In smart checking block")
+    }else{
+        println("In type checking regular block")
+    }
 
 }
 
