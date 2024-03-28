@@ -7,7 +7,12 @@ fun main(){
 
 }
 
-abstract class Shape{
+interface dragable{
+    fun drag()
+}
+
+
+abstract class Shape: dragable{
 
     val name:String = ""
     abstract fun area() : Int
@@ -19,7 +24,7 @@ class square(val side: Int) : Shape(){
     override fun area() : Int{
         return side*side
     }
-
+    override fun drag() = println("hello")
     override fun display(){
         println("This is a Square")
     }
